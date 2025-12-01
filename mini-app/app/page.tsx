@@ -1,5 +1,6 @@
 import { description, title } from "@/lib/metadata";
 import { generateMetadata } from "@/lib/farcaster-embed";
+import GameBoard from "@/components/game-board";
 
 export { generateMetadata };
 
@@ -10,6 +11,7 @@ export default function Home() {
       <span className="text-2xl">{title}</span>
       <span className="text-muted-foreground">{description}</span>
       <img className="size-[512px] mt-4" src="/logo.png" alt="Color Swipe Saga Logo" width={512} height={512} />
+      <GameBoard />
       <div className="mt-4 w-full max-w-md">
         <h2 className="text-xl font-semibold mb-2">Levels</h2>
         {Array.from({ length: 100 }, (_, i) => i + 1).map((level) => {
